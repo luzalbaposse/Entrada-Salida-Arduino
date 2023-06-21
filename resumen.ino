@@ -67,15 +67,17 @@ void loop() {
     time_stamp = time_stamp - 1;
   }
 
-  delay(2);
+  delay(10);
 }
 
 void click() {
   if (time_stamp == 0) {
     if (button == 0) {
       button = 1;
+      time_stamp = 40;
     } else {
       button = 0;
+      time_stamp = 40;
     }
   }
 }
