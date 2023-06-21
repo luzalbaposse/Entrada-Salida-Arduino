@@ -40,12 +40,10 @@ void loop() {
     digitalWrite(ledPin0, HIGH);
     digitalWrite(ledPin1, HIGH);
     digitalWrite(ledPin2, HIGH);
-    time_stamp = 250;
   } else{
     digitalWrite(ledPin0, LOW);
     //digitalWrite(ledPin1, LOW); Como se juega con el brillo de este pin, lo dejamos relacionado al estado que tenga
     digitalWrite(ledPin2, LOW);
-    time_stamp = 250;
   }
   if (time_stamp > 0){
     time_stamp = time_stamp - 1;
@@ -57,8 +55,10 @@ void click() {
   if(time_stamp == 0){
 if (button == 0) {
     button = 1;
+    time_stamp = 250;
   } else {
     button = 0;
+    time_stamp = 250;
   } 
   }
 }
